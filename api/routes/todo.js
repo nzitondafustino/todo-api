@@ -8,12 +8,15 @@ var createTodo=require('../controllers/createTodo');
 var updateTodo=require('../controllers/updateTodo');
 var getTodo=require('../controllers/getTodo');
 var deleteTodo=require('../controllers/deleteTodo');
+
+//importing authentication middleware
+var AuthCheck=require('../auth/authcheck');
 //setting up routes
 router.get('/',getAllTodo);
-router.post('/',createTodo);
-router.patch('/:id',updateTodo);
+router.post('/',AuthCheck,createTodo);
+router.patch('/:id',AuthCheck,updateTodo);
 router.get('/:id',getTodo);
-router.delete('/:id',deleteTodo);
+router.delete('/:id',AuthCheck,deleteTodo);
 
 
 //export router

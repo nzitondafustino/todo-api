@@ -7,6 +7,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 mongoose.connect('mongodb://localhost:27017/todo', {useNewUrlParser: true});
 var todoRoute=require('./api/routes/todo');
+var userRoute=require('./api/routes/users');
 app.use(morgan('dev'));
 
 //solving CORS problem
@@ -24,6 +25,7 @@ app.use((req,res,next)=>{
 })
 
 app.use('/todo',todoRoute);
+app.use('/users',userRoute);
 
 //creating route error
 
