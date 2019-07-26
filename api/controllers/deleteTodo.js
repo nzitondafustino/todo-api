@@ -6,7 +6,7 @@ module.exports=(req,res,next)=>{
             message:'Item deleted successfully',
             request:{
                 type:"POST",
-                url:req.protocol + '://' + req.get('host'),
+                url:req.protocol + '://' + req.get('host') + '/todo',
                 body:{
                     name:'String',
                     description:'String',

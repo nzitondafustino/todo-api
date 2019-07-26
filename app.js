@@ -5,7 +5,11 @@ var mongoose=require('mongoose');
 var bodyParser=require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-mongoose.connect('mongodb://localhost:27017/todo', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://todo:1234567890@todo-1aeoa.mongodb.net/test?retryWrites=true&w=majority',
+ {
+    useNewUrlParser: true,
+    useCreateIndex: true
+});
 var todoRoute=require('./api/routes/todo');
 var userRoute=require('./api/routes/users');
 app.use(morgan('dev'));
