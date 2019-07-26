@@ -1,8 +1,8 @@
 
-#guidance of todo api#
-##accepted url##
+Markup:# guidance of todo api #
+Markup:## accepted url ##
 
-###todo urls###
+Markup:### todo urls ###
 ```javascript
 //http://localhost:3000/todo (getting all todos list)
 //http://localhost:3000/todo (gcreating a new todo METHOD 'POST')
@@ -18,7 +18,7 @@
 //http://localhost:3000/todo/id (updating single todo)
 
 ```
-###user urls###
+Markup:### user urls ###
 ```javascript
 //http://localhost:3000/users/signup (registering a new user)
 //data format
